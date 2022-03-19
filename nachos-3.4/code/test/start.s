@@ -130,6 +130,22 @@ Yield:
 	j	$31
 	.end Yield
 
+	.globl ReadNum
+	.ent	ReadNum
+ReadNum:
+	addiu $2,$0,SC_ReadNum
+	syscall
+	j	$31
+	.end ReadNum
+
+	.globl PrintNum
+	.ent	PrintNum
+PrintNum:
+	addiu $2,$0,SC_PrintNum
+	syscall
+	j	$31
+	.end PrintNum
+
 	.globl ReadChar
 	.ent	ReadChar
 ReadChar:
@@ -146,6 +162,22 @@ PrintChar:
 	j	$31
 	.end PrintChar
 	
+	.globl SRandomNum
+	.ent	SRandomNum
+SRandomNum:
+	addiu $2,$0,SC_SRandomNum
+	syscall
+	j	$31
+	.end SRandomNum
+	
+	.globl RandomNum
+	.ent	RandomNum
+RandomNum:
+	addiu $2,$0,SC_RandomNum
+	syscall
+	j	$31
+	.end RandomNum
+
 	.globl ReadString
 	.ent	ReadString
 ReadString:
